@@ -28,5 +28,17 @@ export const SidebarMenuItem = () => [
     icon: <BsFillPersonFill />,
     path: "profile",
   },
+  {
+    id: 4,
+    label: "AI Resume Builder",
+    icon: <BsFillPersonFill />,
+    path: "AI Resume Builder",
+  },
+  {
+    id: 5,
+    label: "Resume Checker",
+    icon: <BsFillPersonFill />,
+    path: "Resume Checker",
+  },
 ];
 

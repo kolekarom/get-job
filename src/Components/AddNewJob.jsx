@@ -21,7 +21,7 @@ const AddNewJobs = ({ setJobModal, onAddJob }) => {
     setStatus("applied");
     setJobModal(false);
   };
-
+//this is for the form validation 
   return (
     <div className="fixed inset-0 bg-black/80 z-40">
       <div className="p-6 w-[80%] lg:w-[50%] shadow-md fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] bg-[#f3f3f3] rounded-lg">
