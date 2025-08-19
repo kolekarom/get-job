@@ -1,9 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useClerk } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
 
 const LogoutModal = ({ setOpenLogoutModal }) => {
+  const { signOut } = useClerk();
+  const navigate = useNavigate();
+
   const closeLogoutModal = () => {
-    setOpenLogoutModal(false); 
+    setOpenLogoutModal(false);
+  };
+
+  const handleLogout = async () => {
+    await signOut(); // Ends the Clerk session
+    navigate("/login"); // Redirect to login page after sign-out
   };
 
   return (
@@ -22,10 +31,18 @@ const LogoutModal = ({ setOpenLogoutModal }) => {
           <p>Are you sure you want to log out?</p>
         </div>
         <div className="flex gap-4 justify-end">
-          <Link to="/login" className="py-2 px-3 text-sm font-medium text-center text-white bg-error rounded-md">
+          <button
+            onClick={handleLogout}
+            className="py-2 px-3 text-sm font-medium text-center text-white bg-error rounded-md hover:bg-red-600"
+          >
             Logout
-          </Link>
-          <button onClick={closeLogoutModal}>Cancel</button>{" "}
+          </button>
+          <button
+            onClick={closeLogoutModal}
+            className="py-2 px-3 text-sm font-medium text-center text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300"
+          >
+            Cancel
+          </button>
         </div>
       </div>
     </div>

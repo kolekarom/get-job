@@ -6,6 +6,7 @@ import { BsBriefcase } from "react-icons/bs";
 import { CiMenuKebab } from "react-icons/ci";
 import DashboardCard from "../Components/DashboardCard";
 import "chart.js/auto";
+import { SignOutButton } from "@clerk/clerk-react";
 
 const Dashboard = () => {
   const [userName, setUserName] = useState("");
@@ -118,6 +119,11 @@ const Dashboard = () => {
             <p className="text-[12px]">{userName || "User"}</p>
             <p className="text-[12px]">{userEmail || "you@beautiful.com"}</p>
           </div>
+          <SignOutButton>
+            <button className="ml-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
+              Logout
+            </button>
+          </SignOutButton>
         </div>
       </div>
       <div className="rounded-lg mb-4">

@@ -3,7 +3,7 @@ import {
   MdMailOutline,
   MdOutlineCall,
   MdOutlineLocationOn,
-  MdOutlineEdit,
+  M3556dOutlineEdit,
   MdAdd,
 } from "react-icons/md";
 

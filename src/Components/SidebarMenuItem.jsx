@@ -4,12 +4,12 @@ import { RiLayoutMasonryFill } from "react-icons/ri";
 
 
 export const SidebarMenuItem = () => [
-  {
-    id: 0,
-    label: "Dashboard",
-    icon: <RiLayoutMasonryFill />,
-    path: "dashboard",
-  },
+  // {
+  //   id: 0,
+  //   label: "Dashboard",
+  //   icon: <RiLayoutMasonryFill />,
+  //   path: "dashboard",
+  // },
   {
     id: 1,
     label: "Applications",
