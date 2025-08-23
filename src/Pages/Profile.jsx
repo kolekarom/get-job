@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
-import {
-  MdMailOutline,
-  MdOutlineCall,
-  MdOutlineLocationOn,
-  M3556dOutlineEdit,
-  MdAdd,
-} from "react-icons/md";
+import { MdMailOutline, MdOutlineCall, MdOutlineLocationOn, MdOutlineEdit, MdAdd } from "react-icons/md";
+
 
 const Profile = () => {
   const [editingName, setEditingName] = useState(false);
